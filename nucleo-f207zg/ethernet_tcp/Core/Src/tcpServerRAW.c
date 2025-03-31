@@ -484,12 +484,12 @@ static void tcp_server_handle (struct tcp_pcb *tpcb, struct tcp_server_struct *e
 	strncpy(buf, (char *)es->p->payload, es->p->tot_len);
 	strcat (buf, "+ Hello from TCP SERVER\n");
 
-
 	esTx->p->payload = (void *)buf;
 	esTx->p->tot_len = (es->p->tot_len - es->p->len) + strlen (buf);
 	esTx->p->len = strlen (buf);
 
 	tcp_server_send(tpcb, esTx);
+  CDC_Transmit_FS(buf, strlen (buf));
 
 	pbuf_free(es->p);
 

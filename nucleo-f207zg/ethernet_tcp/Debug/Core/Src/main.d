@@ -24,6 +24,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_flash_ex.h \
  ../Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_pwr.h \
  ../Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_pwr_ex.h \
+ ../Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_pcd.h \
+ ../Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_ll_usb.h \
+ ../Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_pcd_ex.h \
  ../LWIP/App/lwip.h \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/opt.h \
  ../LWIP/Target/lwipopts.h \
@@ -53,7 +56,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/Third_Party/LwIP/src/include/netif/ethernet.h \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/dhcp.h \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/timeouts.h \
- ../LWIP/Target/ethernetif.h ../Core/Inc/tcpServerRAW.h
+ ../LWIP/Target/ethernetif.h ../USB_DEVICE/App/usb_device.h \
+ ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
+ ../USB_DEVICE/Target/usbd_conf.h ../Core/Inc/tcpServerRAW.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal.h:
 ../Core/Inc/stm32f2xx_hal_conf.h:
@@ -80,6 +85,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_flash_ex.h:
 ../Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_pwr.h:
 ../Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_pwr_ex.h:
+../Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_pcd.h:
+../Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_ll_usb.h:
+../Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_pcd_ex.h:
 ../LWIP/App/lwip.h:
 ../Middlewares/Third_Party/LwIP/src/include/lwip/opt.h:
 ../LWIP/Target/lwipopts.h:
@@ -110,4 +118,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Middlewares/Third_Party/LwIP/src/include/lwip/dhcp.h:
 ../Middlewares/Third_Party/LwIP/src/include/lwip/timeouts.h:
 ../LWIP/Target/ethernetif.h:
+../USB_DEVICE/App/usb_device.h:
+../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
+../USB_DEVICE/Target/usbd_conf.h:
 ../Core/Inc/tcpServerRAW.h:

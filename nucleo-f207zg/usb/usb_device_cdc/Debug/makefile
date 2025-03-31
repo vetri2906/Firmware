@@ -64,8 +64,8 @@ all: main-build
 main-build: USB_CDC.elf secondary-outputs
 
 # Tool invocations
-USB_CDC.elf USB_CDC.map: $(OBJS) $(USER_OBJS) D:\Vetri\1.git\others\Firmware\nucleo-f207zg\usb\STM32F207ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "USB_CDC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\Vetri\1.git\others\Firmware\nucleo-f207zg\usb\STM32F207ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="USB_CDC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+USB_CDC.elf USB_CDC.map: $(OBJS) $(USER_OBJS) D:\Vetri\1.git\others\Firmware\nucleo-f207zg\usb\usb_device_cdc\STM32F207ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "USB_CDC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\Vetri\1.git\others\Firmware\nucleo-f207zg\usb\usb_device_cdc\STM32F207ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="USB_CDC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
